@@ -45,9 +45,18 @@ them working.
 
 ### Velaluqa GmbH, Berlin, Germany
 
-Software developer, March 2022 to present. I develop and maintain several web
-applications. Highlights include a 77% faster CI test suite, more reliable
-browser tests, background job processing and user impersonation.
+Software developer, March 2022 to present. I build and maintain several web
+applications used by thousands of people.
+
+- **APIs:** build RESTful and GraphQL APIs for our applications.
+- **Testing:** cut the CI test suite from 40 minutes to 9 (77% faster), moved
+  browser tests from Selenium to Cuprite so they fail less often, and expanded
+  coverage with RSpec unit tests and Capybara and Turnip acceptance tests.
+- **Background processing:** moved slow work out of web requests and into
+  Sidekiq background jobs.
+- **Security and upkeep:** keep dependencies current and free of known
+  vulnerabilities, and run the applications in Docker for consistent
+  development and deployment.
 
 ### Creative Works, Lagos, Nigeria
 
@@ -55,7 +64,7 @@ Backend developer, February 2020 to November 2021. I built web applications
 and REST APIs at a fast-moving startup, working with frontend developers to
 ship features on tight timelines.
 
-My [resume]({{ site.links.resume | relative_url }}) (PDF) has the details.
+My [resume]({{ site.links.resume | relative_url }}) has the details.
 
 ## Background
 
