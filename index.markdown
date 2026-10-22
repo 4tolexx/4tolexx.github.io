@@ -45,18 +45,23 @@ them working.
 
 ### Velaluqa GmbH, Berlin, Germany
 
-Software developer, March 2022 to present. I build and maintain several web
-applications used by thousands of people.
+Software developer, March 2022 to present. I build and maintain Rails
+applications for healthcare and education clients, including a medical imaging
+platform used in clinical trials.
 
-- **APIs:** build RESTful and GraphQL APIs for our applications.
-- **Testing:** cut the CI test suite from 40 minutes to 9 (77% faster), moved
-  browser tests from Selenium to Cuprite so they fail less often, and expanded
-  coverage with RSpec unit tests and Capybara and Turnip acceptance tests.
-- **Background processing:** moved slow work out of web requests and into
-  Sidekiq background jobs.
-- **Security and upkeep:** keep dependencies current and free of known
-  vulnerabilities, and run the applications in Docker for consistent
-  development and deployment.
+- **Upgrades:** took two production applications from Rails 6.0 to 8.1 and
+  Ruby 2.7 to 3.3, including the Devise 5 and Sidekiq 8 migrations.
+- **Performance:** cut the CI suite from 40 minutes to 9, then added parallel
+  and changed-only test runs; found and fixed N+1 queries, added database
+  monitoring, and streamed multi-gigabyte downloads.
+- **APIs:** REST and GraphQL APIs, including GraphQL mutations with
+  authorization for a React frontend.
+- **Testing:** moved browser tests from Selenium to Cuprite, and wrote
+  acceptance tests with Turnip and Capybara alongside RSpec.
+- **Security:** added Brakeman, bundler-audit and container scanning to CI,
+  and fixed vulnerabilities as they came up.
+- **Background jobs:** built a Sidekiq job system with progress tracking,
+  cancellation and retries, plus user-scheduled recurring tasks.
 
 ### Creative Works, Lagos, Nigeria
 
