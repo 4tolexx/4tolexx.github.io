@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <style>
+    rect { fill: #faf4ed; stroke: #286983; }
+    text { fill: #286983; }
+    @media (prefers-color-scheme: dark) {
+      rect { fill: #191724; stroke: #9ccfd8; }
+      text { fill: #9ccfd8; }
+    }
+  </style>
+  <rect x="3" y="3" width="58" height="58" rx="5" stroke-width="5"/>
+  <text x="32" y="43" text-anchor="middle" font-family="Literata, Georgia, serif" font-size="30" font-weight="600">Tu</text>
+</svg>

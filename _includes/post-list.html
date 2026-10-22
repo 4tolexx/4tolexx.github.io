@@ -1,0 +1,12 @@
+{%- comment -%}
+  Lists posts newest first. Pass `limit=3` to show only the latest few.
+{%- endcomment -%}
+{%- assign limit = include.limit | default: site.posts.size -%}
+<ul class="post-list">
+  {%- for post in site.posts limit: limit %}
+  <li>
+    <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+    <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+  </li>
+  {%- endfor %}
+</ul>

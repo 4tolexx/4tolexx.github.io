@@ -1,21 +1,12 @@
-<header class="site-header" role="banner">
-
-  <div class="wrapper">
-    {%- assign default_paths = site.pages | map: "path" -%}
-    {%- assign page_paths = site.header_pages | default: default_paths -%}
-    <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
-
-    {%- if page_paths -%}
-      <nav class="site-nav">
-        <div class="trigger">
-          {%- for path in page_paths -%}
-            {%- assign my_page = site.pages | where: "path", path | first -%}
-            {%- if my_page.title -%}
-            <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
-            {%- endif -%}
-          {%- endfor -%}
-        </div>
-      </nav>
-    {%- endif -%}
+<header class="site-header">
+  <div class="wrap site-header-inner">
+    <a class="brand" href="{{ '/' | relative_url }}">
+      <span class="tile tile-sm" aria-hidden="true">Tu</span>
+      <span class="brand-name">{{ site.title }}</span>
+    </a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="{{ '/blog/' | relative_url }}"{% if page.url == '/blog/' or page.layout == 'post' %} aria-current="page"{% endif %}>Writing</a>
+      <a href="{{ site.links.resume | relative_url }}">Resume</a>
+    </nav>
   </div>
 </header>

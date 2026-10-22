@@ -2,6 +2,7 @@
 layout: post
 title: 'How to setup helix editor for ruby'
 date: 2024-02-19
+description: "A simple Helix editor setup for Ruby, with Solargraph for autocomplete and a snippets language server."
 ---
 
 I have been a longtime VScode user, and I still like it. It is very

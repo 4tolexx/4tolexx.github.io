@@ -1,56 +1,63 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-#
-# If you need help with YAML syntax, here are some quick references for you:
-# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
-# https://learnxinyminutes.com/docs/yaml/
-#
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
+# Site settings. Restart `bundle exec jekyll serve` after editing this file.
 
-title: Uzochukwu Tochukwu Theophilus
-email: your-email@example.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Welcome! to Tochukwu's world.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+title: Tochukwu Uzochukwu
+tagline: Programmer
+description: >-
+  Programmer. I keep web applications healthy, make test suites fast,
+  and write about tools and working with AI coding agents.
+url: "https://tolexx.dev"
+baseurl: ""
+lang: en
 
-# Build settings
-theme: minima
+# No theme: the layouts and styles all live in this repository.
+# GitHub Pages would otherwise apply its default theme.
+theme: null
+
+author:
+  name: Tochukwu Uzochukwu
+  email: tolexreal7@gmail.com
+  url: "https://tolexx.dev"
+
+# Used by jekyll-seo-tag for link previews and structured data.
+twitter:
+  username: 4tolexx
+  card: summary_large_image
+social:
+  name: Tochukwu Uzochukwu
+  links:
+    - https://github.com/4tolexx
+    - https://www.linkedin.com/in/uzochukwu-tochukwu-bb307683
+    - https://x.com/4tolexx
+
+# Links shown in the header, hero and footer.
+links:
+  email: tolexreal7@gmail.com
+  github: https://github.com/4tolexx
+  linkedin: https://www.linkedin.com/in/uzochukwu-tochukwu-bb307683
+  x: https://x.com/4tolexx
+  hackernews: https://news.ycombinator.com/user?id=Tolexx
+  resume: /assets/files/tochukwu-uzochukwu-resume.pdf
+
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
 
-minima:
-  skin: dark
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/images/og-default.png
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
 
-# Exclude from processing.
-# The following items will not be processed, by default.
-# Any item listed under the `exclude:` key here will be automatically added to
-# the internal "default list".
-#
-# Excluded items can be processed by explicitly listing the directories or
-# their entries' file path in the `include:` list.
-#
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .ruby-lsp
+  - .ruby-version
+  - README.md

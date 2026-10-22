@@ -1,22 +1,13 @@
-<footer class="site-footer h-card">
-  <data class="u-url" href="{{ "/" | relative_url }}"></data>
-
-  <div class="wrapper">
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li class="p-name">
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-3">
-        <p id="copyright"></p>
-      </div>
-    </div>
-
+<footer class="site-footer">
+  <div class="wrap site-footer-inner">
+    <p>&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}</p>
+    <ul class="link-row" aria-label="Elsewhere">
+      <li><a href="mailto:{{ site.links.email }}">Email</a></li>
+      <li><a href="{{ site.links.github }}">GitHub</a></li>
+      <li><a href="{{ site.links.linkedin }}">LinkedIn</a></li>
+      <li><a href="{{ site.links.x }}">X</a></li>
+      <li><a href="{{ site.links.hackernews }}">Hacker News</a></li>
+      <li><a href="{{ '/feed.xml' | relative_url }}">RSS</a></li>
+    </ul>
   </div>
-
 </footer>
-<script>
-  document.getElementById('copyright').innerHTML = '&copy; ' + new Date().getFullYear() + ' Tolexx';
-</script>

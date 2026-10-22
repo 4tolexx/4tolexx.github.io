@@ -1,0 +1,514 @@
+/* Colours follow the Rosé Pine palette: Dawn in light mode, the main variant in dark mode. */
+:root {
+  --bg: #faf4ed;
+  --surface: #fffaf3;
+  --overlay: #f2e9e1;
+  --text: #575279;
+  --muted: #6e6a86;
+  --rule: #dfdad9;
+  --accent: #286983;
+  --accent-soft: #56949f;
+  --mark: #907aa9;
+
+  --code-comment: #797593;
+  --code-keyword: #286983;
+  --code-string: #b4637a;
+  --code-function: #6e5a99;
+  --code-type: #3e7e8a;
+  --code-number: #907aa9;
+  --code-error: #b4637a;
+
+  --serif: "Literata", Georgia, "Times New Roman", serif;
+  --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  --measure: 40rem;
+  --space: 1.5rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #191724;
+    --surface: #1f1d2e;
+    --overlay: #26233a;
+    --text: #e0def4;
+    --muted: #908caa;
+    --rule: #403d52;
+    --accent: #9ccfd8;
+    --accent-soft: #31748f;
+    --mark: #c4a7e7;
+
+    --code-comment: #6e6a86;
+    --code-keyword: #31748f;
+    --code-string: #f6c177;
+    --code-function: #ebbcba;
+    --code-type: #9ccfd8;
+    --code-number: #c4a7e7;
+    --code-error: #eb6f92;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--serif);
+  font-size: 1.125rem;
+  line-height: 1.7;
+  font-optical-sizing: auto;
+  text-rendering: optimizeLegibility;
+}
+
+.wrap {
+  max-width: var(--measure);
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+
+/* Links */
+
+a {
+  color: var(--accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+a:focus-visible,
+summary:focus-visible {
+  outline: 2px solid var(--mark);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  transform: translateY(-200%);
+  padding: 0.5rem 0.75rem;
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--rule);
+  z-index: 10;
+}
+
+.skip-link:focus {
+  transform: none;
+}
+
+/* The element tile: the site's mark, a nod to a chemistry degree. */
+
+.tile {
+  display: inline-grid;
+  place-content: center;
+  border: 2px solid var(--accent);
+  border-radius: 3px;
+  color: var(--accent);
+  font-weight: 600;
+  line-height: 1;
+  font-variant-ligatures: none;
+}
+
+.tile-sm {
+  width: 2rem;
+  height: 2rem;
+  font-size: 0.95rem;
+  border-width: 1.5px;
+}
+
+.tile-lg {
+  flex: none;
+  width: 7rem;
+  height: 7rem;
+  gap: 0.6rem;
+  text-align: center;
+  background: var(--surface);
+}
+
+.tile-symbol {
+  font-size: 2.9rem;
+  letter-spacing: -0.02em;
+}
+
+.tile-name {
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: var(--muted);
+  letter-spacing: 0.02em;
+}
+
+/* Header and footer */
+
+.site-header-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 1.5rem;
+  padding-block: 1.5rem;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.site-nav {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.site-nav a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.site-nav a:hover,
+.site-nav a[aria-current="page"] {
+  color: var(--text);
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+}
+
+.site-footer {
+  margin-top: 5rem;
+  border-top: 1px solid var(--rule);
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.site-footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem 1.5rem;
+  padding-block: 1.75rem 2.5rem;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+.link-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Headings and body text */
+
+h1,
+h2,
+h3 {
+  color: var(--text);
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+h1 {
+  font-size: 2.25rem;
+  margin: 0 0 0.75rem;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: 1.4rem;
+  margin: 3rem 0 0.75rem;
+}
+
+h3 {
+  font-size: 1.125rem;
+  margin: 2rem 0 0.25rem;
+}
+
+.lede {
+  margin: 0 0 1.25rem;
+  font-size: 1.2rem;
+  color: var(--text);
+}
+
+.prose > :first-child {
+  margin-top: 0;
+}
+
+.prose p,
+.prose ul,
+.prose ol,
+.prose pre,
+.prose blockquote,
+.prose video,
+.prose figure {
+  margin: 0 0 var(--space);
+}
+
+.prose ul,
+.prose ol {
+  padding-left: 1.25rem;
+}
+
+.prose li {
+  margin-bottom: 0.5rem;
+}
+
+.prose li::marker {
+  color: var(--muted);
+}
+
+.prose strong {
+  font-weight: 600;
+}
+
+.prose blockquote {
+  padding-left: 1rem;
+  border-left: 3px solid var(--rule);
+  color: var(--muted);
+  font-style: italic;
+}
+
+.prose hr {
+  border: 0;
+  border-top: 1px solid var(--rule);
+  margin: 2.5rem 0;
+}
+
+.prose img,
+.prose video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+}
+
+/* Code */
+
+code,
+pre {
+  font-family: var(--mono);
+  font-size: 0.85em;
+}
+
+:not(pre) > code {
+  padding: 0.1em 0.35em;
+  background: var(--overlay);
+  border-radius: 3px;
+  overflow-wrap: anywhere;
+}
+
+pre {
+  padding: 1rem 1.15rem;
+  overflow-x: auto;
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  line-height: 1.55;
+}
+
+.highlighter-rouge .highlight {
+  background: transparent;
+}
+
+.highlight .c,
+.highlight .c1,
+.highlight .cm,
+.highlight .cs,
+.highlight .cp { color: var(--code-comment); font-style: italic; }
+.highlight .k,
+.highlight .kd,
+.highlight .kn,
+.highlight .kp,
+.highlight .kr,
+.highlight .kc,
+.highlight .kt,
+.highlight .ow { color: var(--code-keyword); }
+.highlight .s,
+.highlight .s1,
+.highlight .s2,
+.highlight .sb,
+.highlight .sd,
+.highlight .sh,
+.highlight .si,
+.highlight .sx,
+.highlight .sr,
+.highlight .ss,
+.highlight .se { color: var(--code-string); }
+.highlight .nf,
+.highlight .fm,
+.highlight .nb,
+.highlight .bp { color: var(--code-function); }
+.highlight .nc,
+.highlight .nn,
+.highlight .nt,
+.highlight .na,
+.highlight .no { color: var(--code-type); }
+.highlight .m,
+.highlight .mi,
+.highlight .mf,
+.highlight .mh,
+.highlight .mo,
+.highlight .il { color: var(--code-number); }
+.highlight .nv,
+.highlight .vi,
+.highlight .vg,
+.highlight .vc { color: var(--text); }
+.highlight .err,
+.highlight .gd { color: var(--code-error); }
+.highlight .gi { color: var(--accent-soft); }
+
+/* Home */
+
+.hero {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.75rem;
+  margin: 2.5rem 0 3rem;
+}
+
+.hero h1 {
+  margin-top: -0.2rem;
+}
+
+.home h3 {
+  margin-bottom: 0;
+}
+
+.home h3 + p {
+  margin-top: 0.25rem;
+}
+
+/* Post lists */
+
+.post-list,
+.prose .post-list {
+  margin: 0 0 var(--space);
+  padding: 0;
+  list-style: none;
+}
+
+.post-list li,
+.prose .post-list li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0 1rem;
+  margin: 0;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.post-list li::marker {
+  content: none;
+}
+
+.post-list time {
+  color: var(--muted);
+  font-size: 0.95rem;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.year {
+  font-size: 1.1rem;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Posts and pages */
+
+.post-header,
+.page-header {
+  margin: 2.5rem 0 2.25rem;
+}
+
+.post-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 1.25rem;
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.post-nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 3.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--rule);
+}
+
+.post-nav a {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  line-height: 1.4;
+}
+
+.post-nav a span {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.post-nav-next {
+  grid-column: 2;
+  text-align: right;
+}
+
+@media (max-width: 34rem) {
+  body {
+    font-size: 1.0625rem;
+  }
+
+  h1 {
+    font-size: 1.85rem;
+  }
+
+  .hero {
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+  }
+
+  .tile-lg {
+    width: 5.5rem;
+    height: 5.5rem;
+    gap: 0.4rem;
+  }
+
+  .tile-symbol {
+    font-size: 2.2rem;
+  }
+
+  .post-nav {
+    grid-template-columns: 1fr;
+  }
+
+  .post-nav-next {
+    grid-column: 1;
+    text-align: left;
+  }
+}
