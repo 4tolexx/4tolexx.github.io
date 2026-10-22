@@ -15,7 +15,7 @@ theme: null
 
 author:
   name: Tochukwu Uzochukwu
-  email: tolexreal7@gmail.com
+  email: tochukwu@tolexx.dev
   url: "https://tolexx.dev"
 
 # Used by jekyll-seo-tag for link previews and structured data.
@@ -31,7 +31,7 @@ social:
 
 # Links shown in the header, hero and footer.
 links:
-  email: tolexreal7@gmail.com
+  email: tochukwu@tolexx.dev
   github: https://github.com/4tolexx
   linkedin: https://www.linkedin.com/in/uzochukwu-tochukwu-bb307683
   x: https://x.com/4tolexx
