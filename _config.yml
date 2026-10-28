@@ -1,10 +1,11 @@
 # Site settings. Restart `bundle exec jekyll serve` after editing this file.
 
 title: Tochukwu Uzochukwu
-tagline: Programmer
+tagline: Software consultant and forward deployed engineer
 description: >-
-  Programmer. I keep web applications healthy, make test suites fast,
-  and write about tools and working with AI coding agents.
+  Software consultant and forward deployed engineer. I help companies
+  automate work with AI, modernise the systems they rely on, and turn hard
+  business problems into working software.
 url: "https://tolexx.dev"
 baseurl: ""
 lang: en

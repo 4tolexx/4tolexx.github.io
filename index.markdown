@@ -3,37 +3,45 @@ layout: home
 title: Tochukwu Uzochukwu
 heading: Hi, I'm Tochukwu.
 lede: >-
-  I'm a programmer. I build and maintain web applications used by
-  thousands of people. This is where I share what I'm working on and what
-  I've learned.
+  I'm a software consultant and forward deployed engineer. I help companies
+  turn hard business problems into working software, from AI automation to
+  the systems they depend on every day.
 ---
 
-## What I do
+## How I can help
 
-I've been writing software professionally for more than six years, mostly on
-the backend: web applications, APIs, background jobs and the tests that keep
-them working.
+I've built and run software professionally for more than six years, most
+recently at a software consultancy serving healthcare and education clients.
 
-- **Make systems faster and more reliable.** I find where the time goes and
-  cut it. For example, I took our CI test suite from 40 minutes to 9, a 77%
-  speedup, and moved our browser tests to a more reliable setup.
-- **Keep long-lived applications current and secure.** I handle upgrades and
-  keep dependencies up to date and free of known security vulnerabilities.
-- **Ship features end to end.** From API design and background jobs to
-  containers for development and deployment, working closely with the people
-  building the frontend.
-- **Work well with AI coding agents.** These days agents write much of the
-  code. I review it, steer it, and build the workflows around it.
+- **Automate work with AI.** I work with AI agents every day. They now write
+  much of the code I ship, and I review and steer everything they produce.
+  That shows me where AI saves real time and where a person needs to check its
+  work, and I use it to automate the repetitive parts of your processes.
   I wrote about [my current setup]({% post_url 2026-10-22-why-i-switched-from-vscode-to-herdr %}).
+- **Bring ageing systems up to date.** I've brought long-running production
+  applications up to current versions and added automatic security checks, so
+  the software your business depends on stays safe and supported.
+- **Make slow systems fast and reliable.** I find where the time goes and cut
+  it. For example, I cut the time our team waits for automated checks from
+  40 minutes to 9, a 77% speedup.
+- **Deliver end to end.** From the first conversation about the problem to
+  software running in production.
 
-### Tools and languages
+## How I work
 
-- **Languages and frameworks:** Ruby and Rails, Python and Django, Elixir and
-  Phoenix, HTML and CSS
-- **Databases:** PostgreSQL, MySQL, SQLite
-- **Testing:** RSpec, Capybara, Cuprite, Turnip
-- **Infrastructure:** Docker, Sidekiq, Linux, CI/CD
-- **Workflow:** Git, GitHub, GitLab, Claude Code, opencode, herdr
+- Understand the problem in your terms before suggesting any technology.
+- Ship something small and useful early, then build on it.
+- Measure before and after, so we both know it worked.
+- Leave your team able to run what I build.
+
+[More on how I work with clients]({% post_url 2026-10-28-how-i-work-with-clients %})
+
+## Work with me {#work-with-me}
+
+I'm available for consulting projects and open to forward deployed
+engineering roles. If you have a problem you'd like solved, email me at
+[{{ site.links.email }}](mailto:{{ site.links.email }}) with a few lines
+about it.
 
 ## Recent writing
 
@@ -45,29 +53,29 @@ them working.
 
 ### Velaluqa GmbH, Berlin, Germany
 
-Software developer, March 2022 to present. I build and maintain Rails
-applications for healthcare and education clients, including a medical imaging
-platform used in clinical trials.
+Software developer at a software consultancy, March 2022 to present. I build
+and maintain software for the company's healthcare and education clients,
+including a medical imaging platform used in clinical trials.
 
-- **Upgrades:** took two production applications from Rails 6.0 to 8.1 and
-  Ruby 2.7 to 3.3, including the Devise 5 and Sidekiq 8 migrations.
-- **Performance:** cut the CI suite from 40 minutes to 9, then added parallel
-  and changed-only test runs; found and fixed N+1 queries, added database
-  monitoring, and streamed multi-gigabyte downloads.
-- **APIs:** REST and GraphQL APIs, including GraphQL mutations with
-  authorization for a React frontend.
-- **Testing:** moved browser tests from Selenium to Cuprite, and wrote
-  acceptance tests with Turnip and Capybara alongside RSpec.
-- **Security:** added Brakeman, bundler-audit and container scanning to CI,
-  and fixed vulnerabilities as they came up.
-- **Background jobs:** built a Sidekiq job system with progress tracking,
-  cancellation and retries, plus user-scheduled recurring tasks.
+- **Modernisation:** brought two long-running production applications up to
+  the latest versions of the tools they are built on.
+- **Speed:** cut the time the team waits for automated checks from 40 minutes
+  to 9, found and fixed slow database access, added monitoring, and made
+  multi-gigabyte file downloads stream straight to users.
+- **Integrations:** built the APIs behind a client-facing web interface,
+  with checks on who is allowed to change what.
+- **Quality:** made the automated browser tests more reliable and added
+  acceptance tests that describe how the software should behave.
+- **Security:** added automatic security checks to every change and fixed
+  vulnerabilities as they came up.
+- **Automation:** built a system for long-running tasks that users can track,
+  cancel, retry and schedule to repeat.
 
 ### Creative Works, Lagos, Nigeria
 
 Backend developer, February 2020 to November 2021. I built web applications
-and REST APIs at a fast-moving startup, working with frontend developers to
-ship features on tight timelines.
+and APIs at a fast-moving startup, working with the frontend team to ship
+features on tight timelines.
 
 My [resume]({{ site.links.resume | relative_url }}) has the details.
 
